@@ -6,8 +6,15 @@ let resturaunt = {
     let seatLeft = this.guestCapacity - this.guestCount;
     return partySize <= seatLeft;
   },
+  seatParty: function (partySize) {
+    this.guestCount = this.guestCount + partySize;
+  },
+  removeParty: function (partySize) {
+    this.guestCount = this.guestCount - partySize;
+  },
 };
 
-let status = resturaunt.checkAvailability(74);
-
-console.log(status);
+resturaunt.seatParty(72);
+console.log(resturaunt.checkAvailability(4));
+resturaunt.removeParty(5);
+console.log(resturaunt.checkAvailability(4));
