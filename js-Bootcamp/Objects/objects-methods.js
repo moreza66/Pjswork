@@ -1,8 +1,13 @@
 let resturaunt = {
   name: 'ASB',
-  guestCapasity: 75,
+  guestCapacity: 75,
   guestCount: 0,
   checkAvailability: function (partySize) {
-    console.log(partySize);
+    let seatLeft = this.guestCapacity - this.guestCount;
+    return partySize <= seatLeft;
   },
 };
+
+let status = resturaunt.checkAvailability(74);
+
+console.log(status);
