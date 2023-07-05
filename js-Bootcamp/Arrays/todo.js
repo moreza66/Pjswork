@@ -1,6 +1,16 @@
-const toDo = ['pray', 'exercise', 'drink water', 'study', 'make connections'];
+const toDos = ['pray', 'exercise', 'drink water', 'study', 'make connections'];
 
-console.log(`You have ${toDo.length} todos!!`);
+toDos.splice(2, 1);
+toDos.push('Buy Coffee');
+toDos.shift();
 
-console.log(`Todo: ${toDo[0]}`); // Output: 1
-console.log(`Todo: ${toDo[toDo.length - 2]}`);
+console.log(`You have ${toDos.length} todos!!`);
+toDos.forEach(function (toDo, index) {
+  const num = index + 1;
+  console.log(`${num}. ${toDo}`);
+});
+
+// console.log(`Todo: ${toDo[0]}`); // Output: 1
+// console.log(`Todo: ${toDo[toDo.length - 2]}`);
+
+// console.log(toDo);
